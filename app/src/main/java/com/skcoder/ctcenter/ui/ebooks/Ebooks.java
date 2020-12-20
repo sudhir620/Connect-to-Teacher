@@ -9,9 +9,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.SearchView;
 import android.widget.Toast;
 
+import com.facebook.shimmer.ShimmerFrameLayout;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -34,6 +36,9 @@ public class Ebooks extends AppCompatActivity {
 
     private DatabaseReference reference;
 
+    ShimmerFrameLayout shimmerFrameLayout;
+    LinearLayout shimmerLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +49,9 @@ public class Ebooks extends AppCompatActivity {
         reference = FirebaseDatabase.getInstance().getReference().child("Ebooks");
 
         ebookRecyclerView = (RecyclerView) findViewById(R.id.ebooks_recyclerview);
+
+        shimmerFrameLayout = findViewById(R.id.shimmer_view_container);
+        shimmerLayout = findViewById(R.id.shimmer_layout);
 
         ebookRecyclerView.setHasFixedSize(true);
 
@@ -64,6 +72,8 @@ public class Ebooks extends AppCompatActivity {
                 adapter = new EbooksAdapter(Ebooks.this, list);
                 ebookRecyclerView.setLayoutManager(new LinearLayoutManager(Ebooks.this));
                 ebookRecyclerView.setAdapter(adapter);
+                shimmerFrameLayout.stopShimmer();
+                shimmerLayout.setVisibility(View.GONE);
             }
 
             @Override

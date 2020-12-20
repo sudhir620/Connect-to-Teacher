@@ -3,6 +3,8 @@ package com.skcoder.ctcenter.ui.notes;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.SearchView;
 import android.widget.Toast;
 
@@ -11,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -28,6 +31,8 @@ public class Notes extends AppCompatActivity {
     RecyclerView notesRecView;
     private ArrayList<NotesModel> list;
     private NotesAdapter adapter;
+    ShimmerFrameLayout shimmerFrameLayout;
+    LinearLayout shimmerLayout;
 
     private DatabaseReference reference;
 
@@ -39,6 +44,9 @@ public class Notes extends AppCompatActivity {
         this.setTitle("Notes");
 
         reference = FirebaseDatabase.getInstance().getReference().child("Notes");
+
+        shimmerFrameLayout = findViewById(R.id.shimmer_note_container);
+        shimmerLayout = findViewById(R.id.shimmer_note_layout);
 
         notesRecView = findViewById(R.id.notesRecView);
         notesRecView.setHasFixedSize(true);
@@ -60,6 +68,8 @@ public class Notes extends AppCompatActivity {
                 adapter = new NotesAdapter(Notes.this, list);
                 notesRecView.setLayoutManager(new LinearLayoutManager(Notes.this));
                 notesRecView.setAdapter(adapter);
+                shimmerFrameLayout.stopShimmer();
+                shimmerLayout.setVisibility(View.GONE);
             }
 
             @Override

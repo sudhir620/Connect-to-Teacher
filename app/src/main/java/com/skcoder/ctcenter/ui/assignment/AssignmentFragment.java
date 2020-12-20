@@ -10,9 +10,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.SearchView;
 import android.widget.Toast;
 
+import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -32,12 +34,18 @@ public class AssignmentFragment extends Fragment {
     FloatingActionButton fab;
     SearchView searchView;
 
+    ShimmerFrameLayout shimmerFrameLayout;
+    LinearLayout linearLayout;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_assignment, container, false);
 
         fab = view.findViewById(R.id.aSearch);
         searchView = view.findViewById(R.id.searchView);
+
+        shimmerFrameLayout = view.findViewById(R.id.shimmer_assignment_container);
+        linearLayout = view.findViewById(R.id.shimmer_assignment_layout);
 
         reference = FirebaseDatabase.getInstance().getReference().child("assignment");
         aRecView = view.findViewById(R.id.aRecView);
@@ -81,6 +89,8 @@ public class AssignmentFragment extends Fragment {
                 adapter = new AssignmentAdapter(getContext(), list);
                 adapter.notifyDataSetChanged();
                 aRecView.setAdapter(adapter);
+                shimmerFrameLayout.stopShimmer();
+                linearLayout.setVisibility(View.GONE);
 
             }
 

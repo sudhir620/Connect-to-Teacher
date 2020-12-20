@@ -10,4 +10,34 @@
         android:id="@+id/notesRecView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_note_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/shimmer_note_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/shimmer_notes_layout"/>
+            <include layout="@layout/shimmer_notes_layout"/>
+            <include layout="@layout/shimmer_notes_layout"/>
+            <include layout="@layout/shimmer_notes_layout"/>
+            <include layout="@layout/shimmer_notes_layout"/>
+            <include layout="@layout/shimmer_notes_layout"/>
+            <include layout="@layout/shimmer_notes_layout"/>
+            <include layout="@layout/shimmer_notes_layout"/>
+            <include layout="@layout/shimmer_notes_layout"/>
+            <include layout="@layout/shimmer_notes_layout"/>
+            <include layout="@layout/shimmer_notes_layout"/>
+            <include layout="@layout/shimmer_notes_layout"/>
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
 </RelativeLayout>

@@ -11,6 +11,7 @@
         android:layout_centerHorizontal="true"
         android:background="@drawable/circlelightblue"
         android:padding="3dp"
+        android:layout_marginTop="40dp"
         android:src="@drawable/sudhir"
         android:layout_height="150dp"/>
     <TextView

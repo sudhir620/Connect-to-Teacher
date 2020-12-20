@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.SearchView;
 import android.widget.Toast;
 
@@ -12,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -32,6 +34,9 @@ public class YoutubeLacture extends AppCompatActivity {
     private YoutubeAdapter adaper;
     DatabaseReference reference;
 
+    ShimmerFrameLayout shimmerFrameLayout;
+    LinearLayout linearLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +47,9 @@ public class YoutubeLacture extends AppCompatActivity {
         reference = FirebaseDatabase.getInstance().getReference().child("Youtube_Link");
 
         youtubeRecyclerView = findViewById(R.id.youtube_recyclerView);
+
+        shimmerFrameLayout = findViewById(R.id.shimmer_youtube_container);
+        linearLayout = findViewById(R.id.shimmer_youtube_layout);
 
         youtubeRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         youtubeRecyclerView.setHasFixedSize(true);
@@ -63,6 +71,8 @@ public class YoutubeLacture extends AppCompatActivity {
                 adaper = new YoutubeAdapter(YoutubeLacture.this, list);
                 adaper.notifyDataSetChanged();
                 youtubeRecyclerView.setAdapter(adaper);
+                shimmerFrameLayout.stopShimmer();
+                linearLayout.setVisibility(View.GONE);
             }
 
             @Override

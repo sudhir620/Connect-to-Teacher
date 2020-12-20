@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import com.github.barteksc.pdfviewer.PDFView;
 import com.skcoder.ctcenter.R;
@@ -18,6 +20,7 @@ import java.net.URL;
 public class PdfViewerActivity extends AppCompatActivity {
     private String url,pdfName;
     private PDFView pdfView;
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +34,9 @@ public class PdfViewerActivity extends AppCompatActivity {
         url = getIntent().getStringExtra("pdfUrl");
 
         pdfView = findViewById(R.id.pdfView);
+        progressBar = findViewById(R.id.progressBar);
         new PdfDownload().execute(url);
-
+        progressBar.setVisibility(View.VISIBLE);
     }
 
     private class PdfDownload extends AsyncTask<String, Void, InputStream>{
@@ -51,13 +55,13 @@ public class PdfViewerActivity extends AppCompatActivity {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
             return inputStream;
         }
 
         @Override
         protected void onPostExecute(InputStream inputStream) {
             pdfView.fromStream(inputStream).load();
+            progressBar.setVisibility(View.GONE);
         }
 
     }
