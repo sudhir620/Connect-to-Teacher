@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00BCD4</color>
+    <color name="colorPrimaryDark">#03DFFB</color>
+    <color name="colorAccent">#36A6B5</color>
+
+    <color name="textgackground">#F13E54</color>
+    <color name="signupbtn">#C1CB06F6</color>
+
+
+    <color name="circleRed">#F5183D</color>
+    <color name="circleYellow">#FFC107</color>
+    <color name="circlegreen">#4CAF50</color>
+    <color name="circleBlue">#3C72EF</color>
+    <color name="circleLightBlue">#11F4F1</color>
+    <color name="circleVolet">#EF28EF</color>
+    <color name="lightGray">#9C9696</color>
+
+    <color name="cardbackground">#03DFFB</color>
+
+    <color name="text_color">#121212</color>
+
+</resources>

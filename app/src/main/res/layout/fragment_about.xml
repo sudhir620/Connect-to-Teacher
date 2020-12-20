@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.about.AboutFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/applogo"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Connect To Teacher"
+                android:textColor="@color/text_color"
+                android:textStyle="bold"
+                android:textSize="22dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/senFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Send Feedback"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:textSize="22sp"
+                android:textColor="@color/colorPrimary"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="#393838"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="Tell me, What can I add new features ?"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/developerTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:text="The Developer"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toRightOf="@id/developerTv"
+                    android:background="@color/colorAccent" />
+
+                <RelativeLayout
+                    android:id="@+id/profileRelativeView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/developerTv"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/backgroundinput"
+                    android:gravity="center"
+                    android:padding="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/developerImageView"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/circlelightblue"
+                        android:padding="2dp"
+                        android:src="@drawable/sudhir" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/developerImageView"
+                        android:text="Sudhir Sharma"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/aboutAppTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profileRelativeView"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="20dp"
+                    android:text="About Application"
+                    android:textColor="@color/text_color"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="5dp"
+                    android:layout_below="@+id/profileRelativeView"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_toRightOf="@id/aboutAppTv"
+                    android:background="@color/colorAccent" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/aboutAppTv"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/backgroundinput"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/appDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/aboutApp"
+                        android:textColor="#393838"
+                        android:textSize="16dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/appDesc"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/appDesc"
+                            android:layout_marginTop="5dp"
+                            android:text="Read the class Notes."
+                            android:textColor="#393838"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/appDesc"
+                            android:layout_marginTop="5dp"
+                            android:text="Check the Syllabus."
+                            android:textColor="#393838"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/appDesc"
+                            android:layout_marginTop="5dp"
+                            android:text="Check the Teacher Details."
+                            android:textColor="#393838"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/appDesc"
+                            android:layout_marginTop="5dp"
+                            android:text="Events Gallery"
+                            android:textColor="#393838"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/appDesc"
+                            android:layout_marginTop="5dp"
+                            android:text="Youtube lectures video."
+                            android:textColor="#393838"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/appDesc"
+                            android:layout_marginTop="5dp"
+                            android:text="Check the Assignments"
+                            android:textColor="#393838"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/appDesc"
+                            android:layout_marginTop="5dp"
+                            android:text="You can also check the notice of holiday or other."
+                            android:textColor="#393838"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/appDesc"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/chatDesc"
+                            android:textColor="#393838"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

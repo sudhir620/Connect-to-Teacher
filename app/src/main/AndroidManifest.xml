@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.skcoder.ctcenter">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/appicon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.syllabus.EceSyllabusActivity"
+            android:parentActivityName=".ui.syllabus.SyllabusOldActivity"/>
+        <activity android:name=".ui.syllabus.ElectricalSyllabusActivity"
+            android:parentActivityName=".ui.syllabus.SyllabusOldActivity"/>
+        <activity android:name=".ui.syllabus.AutomobileSyllabusActivity"
+            android:parentActivityName=".ui.syllabus.SyllabusOldActivity"/>
+        <activity android:name=".ui.syllabus.CivilSyllabusActivity"
+            android:parentActivityName=".ui.syllabus.SyllabusOldActivity"/>
+        <activity android:name=".ui.syllabus.MechanicalSyllabusActivity"
+            android:parentActivityName=".ui.syllabus.SyllabusOldActivity"/>
+        <activity android:name=".ui.syllabus.CseSyllabusActivity"
+            android:parentActivityName=".ui.syllabus.SyllabusOldActivity"/>
+        <activity
+            android:name=".ui.syllabus.SyllabusOldActivity"
+            android:parentActivityName=".ui.syllabus.Syllabus" />
+        <activity
+            android:name=".ui.chat.EceDepartmentActivity"
+            android:parentActivityName=".ui.notes.Notes" />
+        <activity
+            android:name=".ui.chat.AmDepartmentActivity"
+            android:parentActivityName=".ui.notes.Notes" />
+        <activity
+            android:name=".ui.chat.ElDepartmentActivity"
+            android:parentActivityName=".ui.notes.Notes" />
+        <activity
+            android:name=".ui.chat.CiDepartmentActivity"
+            android:parentActivityName=".ui.notes.Notes" />
+        <activity
+            android:name=".ui.chat.MeDepartmentActivity"
+            android:parentActivityName=".ui.notes.Notes" />
+        <activity
+            android:name=".ui.chat.ShowImgActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".ui.chat.CsDepartmentActivity"
+            android:parentActivityName=".ui.notes.Notes" />
+        <activity
+            android:name=".ui.gallery.ImageViewActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".ui.notes.NotesViewActivity"
+            android:parentActivityName=".ui.notes.Notes" />
+        <activity
+            android:name=".ui.youtubeLecture.VideoViewActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".ui.ebooks.PdfViewerActivity"
+            android:parentActivityName=".ui.ebooks.Ebooks" />
+        <activity
+            android:name=".ui.notification.ShowImageActivity"
+            android:parentActivityName=".ui.notification.Notification" />
+        <activity
+            android:name=".ui.youtubeLecture.YoutubeLacture"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".ui.ebooks.Ebooks"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".ui.notification.Notification"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".ui.gallery.Gallery"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".ui.teachers.TeacherDetails"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".ui.syllabus.Syllabus"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".ui.notes.Notes"
+            android:parentActivityName=".Home" />
+        <activity android:name=".Home" />
+        <activity
+            android:name=".Signup"
+            android:parentActivityName=".Login" />
+        <activity
+            android:name=".Login"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Splashscreen"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

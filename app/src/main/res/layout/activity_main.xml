@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/college"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/welcome"
+        android:textColor="#FFF"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/description"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/round_button"
+        android:fontFamily="sans-serif"
+        android:paddingStart="90dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="90dp"
+        android:paddingBottom="10dp"
+        android:text="Login Now"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--        <Button-->
+<!--            android:id="@+id/teacherLogin"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:background="@drawable/normal_rounded_button"-->
+<!--            android:fontFamily="sans-serif"-->
+<!--            android:paddingStart="70dp"-->
+<!--            android:paddingTop="10dp"-->
+<!--            android:paddingEnd="70dp"-->
+<!--            android:paddingBottom="10dp"-->
+<!--            android:text="teacher login"-->
+<!--            android:textColor="#fff"-->
+<!--            android:textSize="15sp"-->
+<!--            android:textStyle="bold" />-->
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
